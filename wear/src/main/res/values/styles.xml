@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+  <style name="CardText">
+    <item name="android:textSize">24sp</item>
+  </style>
+
+  <style name="CardText.Elapsed">
+    <item name="android:textSize">48sp</item>
+  </style>
+</resources>

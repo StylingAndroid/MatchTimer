@@ -1,0 +1,51 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+def signingProperties = loadSigning()
+ext {
+    VERSION_CODE = 102
+    VERSION_NAME = "1.0.2"
+    releaseSigning = {
+        storeFile file(signingProperties.getProperty("ANDROID_KEY_STORE"))
+        storePassword signingProperties.getProperty("ANDROID_KEY_STORE_PASSWORD")
+        keyAlias signingProperties.getProperty("ANDROID_KEY_ALIAS")
+        keyPassword signingProperties.getProperty("ANDROID_KEY_PASSWORD")
+    }
+}
+
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:0.12.2'
+    }
+}
+allprojects {
+    repositories {
+        jcenter()
+    }
+}
+
+def loadSigning() {
+    if (project.rootProject.file('local.properties').exists()) {
+        return loadSigningFromLocalProperties()
+    } else {
+        return loadSigningFromEnvironment()
+    }
+}
+
+def loadSigningFromEnvironment() {
+    Properties localProperties = new Properties()
+    localProperties.setProperty('ANDROID_KEY_STORE', System.getenv("ANDROID_KEY_STORE"))
+    localProperties.setProperty('ANDROID_KEY_STORE_PASSWORD', System.getenv("ANDROID_KEY_STORE_PASSWORD"))
+    localProperties.setProperty('ANDROID_KEY_ALIAS', System.getenv("ANDROID_KEY_ALIAS"))
+    localProperties.setProperty('ANDROID_KEY_PASSWORD', System.getenv("ANDROID_KEY_PASSWORD"))
+    return localProperties
+}
+
+def loadSigningFromLocalProperties() {
+    Properties localProperties = new Properties()
+    localProperties.load(project.rootProject.file('local.properties').newDataInputStream())
+    return localProperties;
+}
+
