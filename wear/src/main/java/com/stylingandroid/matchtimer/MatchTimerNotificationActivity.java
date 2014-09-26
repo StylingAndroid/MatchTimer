@@ -88,7 +88,7 @@ public class MatchTimerNotificationActivity extends Activity implements View.OnC
 
     private String format(long elapsedMillis) {
         long mins = elapsedMillis / MINUTE_MILLIS;
-        long secs = (elapsedMillis - (mins * MINUTE_MILLIS)) / SECOND_MILLIS;
+        long secs = elapsedMillis - (mins * MINUTE_MILLIS) / SECOND_MILLIS;
         return String.format(Locale.getDefault(), "%2d:%02d", mins, secs);
     }
 

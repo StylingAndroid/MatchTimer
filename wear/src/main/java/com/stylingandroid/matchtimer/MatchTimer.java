@@ -91,7 +91,7 @@ public final class MatchTimer implements SharedPreferences.OnSharedPreferenceCha
     public long getTotalStoppages() {
         long now = System.currentTimeMillis();
         if (isPaused()) {
-            return totalStoppages + (now - currentStoppage);
+            return totalStoppages + now - currentStoppage;
         }
         return totalStoppages;
     }
@@ -106,7 +106,7 @@ public final class MatchTimer implements SharedPreferences.OnSharedPreferenceCha
 
     public void start() {
         if (end > 0) {
-            start = System.currentTimeMillis() - (end - start);
+            start = System.currentTimeMillis() - end - start;
             end = 0;
         } else {
             start = System.currentTimeMillis();
