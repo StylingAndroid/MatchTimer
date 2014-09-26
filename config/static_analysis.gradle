@@ -7,8 +7,6 @@ check.dependsOn 'checkstyle', 'pmd', 'findbugs'
 task pmd(type: Pmd) {
     ignoreFailures = true
 
-    ruleSets = ["basic", "braces", "android", "junit"]
-
     source 'src'
     include '**/*.java'
     exclude '**/gen/**'
