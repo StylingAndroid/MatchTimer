@@ -2,8 +2,8 @@
 
 def signingProperties = loadSigning()
 ext {
-    VERSION_CODE = 105
-    VERSION_NAME = "1.0.5"
+    VERSION_CODE = 106
+    VERSION_NAME = "1.0.6"
     releaseSigning = {
         storeFile file(signingProperties.getProperty("ANDROID_KEY_STORE"))
         storePassword signingProperties.getProperty("ANDROID_KEY_STORE_PASSWORD")
