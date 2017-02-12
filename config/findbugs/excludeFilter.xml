@@ -4,4 +4,12 @@
     <Class name="~.*\.R\$.*" />
     <Bug pattern="NM_CLASS_NAMING_CONVENTION" />
   </Match>
+  <Match>
+    <Class name="~.*\.R\$.*" />
+    <Bug pattern="MS_MUTABLE_ARRAY" />
+  </Match>
+  <Match>
+    <Class name="~.*\.R\$.*" />
+    <Bug pattern="MS_PKGPROTECT" />
+  </Match>
 </FindBugsFilter>

@@ -1,0 +1,26 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tools="http://schemas.android.com/tools"
+  package="com.stylingandroid.matchtimer">
+
+  <application
+    android:allowBackup="false"
+    android:fullBackupContent="false"
+    tools:ignore="GoogleAppIndexingWarning,UnusedAttribute">
+
+    <receiver
+      android:name=".MatchTimerReceiver"
+      android:enabled="true"
+      android:exported="false">
+      <intent-filter>
+        <action android:name="com.stylingandroid.matchtimer.ACTION_START" />
+        <action android:name="com.stylingandroid.matchtimer.ACTION_STOP" />
+        <action android:name="com.stylingandroid.matchtimer.ACTION_PAUSE" />
+        <action android:name="com.stylingandroid.matchtimer.ACTION_RESUME" />
+        <action android:name="com.stylingandroid.matchtimer.ACTION_RESET" />
+        <action android:name="com.stylingandroid.matchtimer.ACTION_UPDATE" />
+        <action android:name="com.stylingandroid.matchtimer.ACTION_ELAPSED_ALARM" />
+        <action android:name="com.stylingandroid.matchtimer.ACTION_FULL_TIME_ALARM" />
+      </intent-filter>
+    </receiver>
+  </application>
+</manifest>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+  <style name="AppTheme" parent="@android:style/Theme.DeviceDefault">
+    <item name="android:windowBackground">@color/ambient_background</item>
+  </style>
+
+  <style name="TimerText">
+    <item name="android:textColor">@color/normal_text</item>
+    <item name="android:textSize">@dimen/timer_text_size</item>
+    <item name="android:textStyle">bold</item>
+    <item name="android:gravity">center_horizontal</item>
+  </style>
+
+  <style name="TimerLabel" parent="TimerText">
+    <item name="android:textColor">@color/normal_text</item>
+    <item name="android:textStyle">normal</item>
+    <item name="android:textSize">@dimen/label_text_size</item>
+    <item name="android:layout_marginBottom">@dimen/label_offset</item>
+  </style>
+</resources>

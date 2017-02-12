@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="total_elapsed">Elapsed</string>
+  <string name="total_played">Played</string>
+  <string name="total_stoppages">Stoppages</string>
+</resources>

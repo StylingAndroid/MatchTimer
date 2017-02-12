@@ -2,9 +2,6 @@
 <resources>
 
   <string name="app_name">Match Timer</string>
-  <string name="title_stopped">Timer: Stopped</string>
-  <string name="title_running">Elapsed: %dm</string>
-  <string name="title_paused">Paused: %dm</string>
   <string name="zero_time">00:00</string>
 
 </resources>

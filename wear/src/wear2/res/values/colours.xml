@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <color name="normal_text">@android:color/white</color>
+  <color name="ambient_text">#7F7F7F</color>
+  <color name="ambient_background">#000000</color>
+</resources>

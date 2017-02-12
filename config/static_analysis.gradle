@@ -23,17 +23,22 @@ task checkstyle(type: Checkstyle) {
 
     source 'src'
     include '**/*.java'
-    exclude '**/packageName/**', '**/utils/MyFile.java'
+    exclude '**/test*/**', '**/gen/**'
     classpath = files()
 }
 
-task findbugs(type: FindBugs, dependsOn: assembleDebug) {
+checkstyle {
+    toolVersion = '7.3'
+}
+
+task findbugs(type: FindBugs, dependsOn: assemble) {
     ignoreFailures = true
     classes = fileTree("$projectDir/build/intermediates/classes/debug/")
-    source = fileTree("$projectDir/src/main/java/")
+    source = fileTree("$projectDir/src/*/java/")
     classpath = files()
     excludeFilter = file("${project(':').projectDir}/config/findbugs/excludeFilter.xml")
     effort = 'max'
+
 }
 
 

@@ -144,11 +144,11 @@
     </module>
     <module name="MissingSwitchDefault" />
     <!-- Problem with finding exception types... -->
-    <module name="RedundantThrows">
+    <!--module name="RedundantThrows">
       <property name="allowUnchecked" value="true" />
       <property name="suppressLoadErrors" value="true" />
       <property name="severity" value="info" />
-    </module>
+    </module-->
     <module name="SimplifyBooleanExpression" />
     <module name="SimplifyBooleanReturn" />
 
