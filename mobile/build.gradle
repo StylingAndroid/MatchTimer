@@ -25,7 +25,7 @@ android {
 
 dependencies {
     wearApp project(path: ':wear', configuration: 'wear1Release')
-    compile 'com.google.android.gms:play-services-wearable:10.0.1'
+    compile 'com.google.android.gms:play-services-wearable:10.2.0'
 }
 
 apply from: "${project(':').projectDir}/config/static_analysis.gradle"
