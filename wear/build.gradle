@@ -39,7 +39,7 @@ android {
 dependencies {
     compile 'com.google.android.support:wearable:2.0.0'
     compile 'com.google.android.gms:play-services-wearable:10.2.0'
-    wear2Compile 'com.android.support.constraint:constraint-layout:1.0.0-beta5'
+    wear2Compile 'com.android.support.constraint:constraint-layout:1.0.0'
     testCompile 'org.mockito:mockito-core:2.6.2'
     testCompile 'org.assertj:assertj-core:3.6.1'
     testCompile 'junit:junit:4.12'
