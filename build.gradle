@@ -4,7 +4,7 @@ def signingProperties = loadSigning()
 ext {
     appMajor = 1
     appMinor = 1
-    appPatch = 0
+    appPatch = 2
     VERSION_CODE = (appMajor * 100000) + (appMinor * 1000) + appPatch
     VERSION_NAME = appMajor + '.' + appMinor + '.' + appPatch
     releaseSigning = {

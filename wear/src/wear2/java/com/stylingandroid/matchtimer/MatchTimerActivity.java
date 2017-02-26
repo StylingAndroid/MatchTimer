@@ -5,6 +5,7 @@ import android.app.PendingIntent;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Vibrator;
+import android.support.annotation.Keep;
 import android.support.v4.content.ContextCompat;
 import android.support.wearable.activity.WearableActivity;
 import android.view.View;
@@ -161,6 +162,7 @@ public class MatchTimerActivity extends WearableActivity {
     }
 
     @Override
+    @Keep
     public void onEnterAmbient(Bundle ambientDetails) {
         super.onEnterAmbient(ambientDetails);
         currentUpdateScheduler.cancelAll();
@@ -183,6 +185,7 @@ public class MatchTimerActivity extends WearableActivity {
     }
 
     @Override
+    @Keep
     public void onExitAmbient() {
         super.onExitAmbient();
         currentUpdateScheduler.cancelAll();
